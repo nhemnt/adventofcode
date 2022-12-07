@@ -105,7 +105,7 @@ const findAllValidDir = (tree) => {
 
 const findSmallDir = (tree) => {
   const totalSpace = tree.root.data.size;
-  const availableSpace = 30000000 - (70000000 - totalSpace);
+  const availableSpace = REQUIRED_SPACE - (UPDATE_SIZE - totalSpace);
   let space = Number.MAX_VALUE,
     dir;
   const nearestToAvailableSpace = (node) => {
