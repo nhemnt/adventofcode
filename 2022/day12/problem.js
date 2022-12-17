@@ -114,4 +114,20 @@ const part1 = (graph) => {
     `${endPoint[0]}_${endPoint[1]}`
   );
 };
+const part2 = () => {
+  const smallest = [];
+  for (let i = 0; i < input.length; i++) {
+    const g = getGraph()
+    smallest.push(
+      getSmallestPath(
+        g,
+        `${i}_${startPoint[1]}`,
+        `${endPoint[0]}_${endPoint[1]}`
+      )
+    );
+  }
+  return smallest.sort()[0];
+};
 console.log(part1(getGraph()));
+
+console.log(part2());
