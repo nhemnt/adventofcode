@@ -1,5 +1,4 @@
 const inputStrng = require('./input');
-const bigInt = require('../../utils/BigInt');
 const normailiseInput = () => {
     const monkeys = inputStrng.reduce((acc, curr) => {
         if(curr === ""){
